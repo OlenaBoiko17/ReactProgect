@@ -11,7 +11,7 @@ import '../styles/styles.scss'
 
 export const App = () => {
   return (
-    <BrowserRouter  >
+    <BrowserRouter basename="/ReactProgect" >
     <Navbar title="ШКОЛА испанского ЯЗЫКА  «ЛаВИта» в петербурге"  />
   <Routes>
     <Route path="/"  element={<Main/> }  />
