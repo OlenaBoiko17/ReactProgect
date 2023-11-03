@@ -1,16 +1,23 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Navbar from '../modules/Navbar/Navbar';
+import Main from '../modules/Main/Main';
+import Footer from '../modules/Footer/Footer';
+import Payment from '../modules/Payment/Payment';
+
+
+import '../styles/styles.scss'
+
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <BrowserRouter  >
+    <Navbar title="ШКОЛА испанского ЯЗЫКА  «ЛаВИта» в петербурге"  />
+  <Routes>
+    <Route path="/"  element={<Main/> }  />
+    <Route path="/payment"  element={<Payment />} />
+  </Routes>
+  <Footer />
+</BrowserRouter >
   );
 };
